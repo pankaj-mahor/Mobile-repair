@@ -1,0 +1,672 @@
+@charset "UTF-8";
+/*!
+ * reeset.css • v1.0.0
+ * MIT License
+ * github.com/thevipinmishra/reeset
+ */
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit],
+[role=button] {
+  cursor: pointer;
+  color: inherit;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: left;
+}
+
+:root {
+  --body-background:#fff;
+  --body-color:#4a5568;
+  --primary: #5496ff;
+  --secondary:#8739e5;
+  --color-light:#718096;
+  --gradient: linear-gradient(90deg, var(--primary), var(--secondary));
+  --name-font:"Dancing Script", cursive;
+}
+
+a i, button i {
+  margin-right: 0.35rem;
+  color: var(--body-color);
+}
+
+i {
+  margin-right: 0.65rem;
+  color: var(--primary);
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Inter";
+  line-height: 1.5;
+  background-color: var(--body-background);
+  color: var(--body-color);
+}
+
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  border-top: 1rem solid var(--secondary);
+  padding: 1.5rem 0;
+  background-color: #fff;
+  border-bottom: 1px solid var(--secondary);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav.expanded .menu {
+  display: block;
+}
+nav.expanded .hamburger svg .open {
+  display: none;
+}
+nav.expanded .hamburger svg .close {
+  display: block;
+}
+nav .logo {
+  font-weight: 700;
+  font-size: 1.9rem;
+  font-family: "Dancing Script", cursive;
+}
+
+.hamburger {
+  height: 36px;
+  width: 36px;
+  background: var(--body-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}
+.hamburger svg {
+  display: block;
+  height: 30px;
+  width: 30px;
+  color: white;
+}
+.hamburger svg .close {
+  display: none;
+}
+
+.menu {
+  flex-basis: 100%;
+  display: none;
+  position: relative;
+}
+.menu li:first-child {
+  margin-top: 0.5rem;
+}
+.menu li + li {
+  margin-top: 0.5rem;
+}
+.menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: var(--color-light);
+}
+
+.inservice h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+}
+.inservice h1 span {
+  border-bottom: 2px solid var(--body-color);
+}
+.inservice h1 i {
+  color: var(--body-color);
+}
+.inservice .services {
+  align-items: center;
+}
+.inservice .services .service {
+  text-align: center;
+  width: 90%;
+  height: max-content;
+  padding-bottom: 1rem;
+  color: var(--body-color);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+.inservice .services .service h2 {
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+  margin-top: -1rem;
+  font-weight: 500;
+}
+.inservice .services .service .areatext {
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+.inservice .services .service .img {
+  display: flex;
+  justify-content: center;
+}
+.inservice .services .service .img img {
+  width: 100px;
+  height: 100px;
+}
+
+.repair .inner {
+  margin-top: 1rem;
+}
+.repair .content {
+  padding-top: 2rem;
+}
+.repair h1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.repair ul {
+  display: block;
+  margin-top: 1rem;
+}
+.repair li {
+  list-style: none;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+.repair p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+.repair p:first-of-type {
+  background: var(--secondary);
+  width: max-content;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  color: var(--body-background);
+}
+.repair h3:first-of-type {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #f1fcf1;
+  background-color: black;
+  width: max-content;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+.repair h3:last-of-type {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #17bf86;
+  color: #e9fcf6;
+  width: max-content;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.repair .imagecontent {
+  display: none;
+}
+
+.banner {
+  margin-top: 3rem;
+}
+.banner h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+}
+.banner h1 span {
+  border-bottom: 2px solid var(--body-color);
+  border-radius: 510px;
+  padding: 0.5rem;
+}
+.banner h1 i {
+  color: var(--body-color);
+}
+.banner .imagebanner {
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.fixwhatsapp {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+}
+.fixwhatsapp img {
+  width: 70px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 50%;
+  height: 70px;
+}
+
+.map-section {
+  border-bottom: 1px solid var(--body-color);
+  margin-bottom: 4rem;
+  padding: 1rem;
+}
+.map-section #map-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.map-section h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--body-color);
+}
+.map-section #location-hours h4 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.map-section #location-hours .small1 {
+  width: 100%;
+  text-align: center;
+  color: var(--secondary);
+}
+.map-section #location-hours #hours h5 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.map-section #location-hours #hours .small1 {
+  display: flex;
+  justify-content: space-around;
+}
+.map-section #location-hours #hours .small1 P {
+  padding: 0.3rem;
+}
+
+footer {
+  background-color: #f4edfd;
+}
+footer .connect {
+  text-align: center;
+  flex-basis: 100%;
+}
+footer .connect h1 {
+  font-size: 1.52rem;
+}
+footer .connect .facebook i {
+  font-size: 2.3rem;
+  padding: 1rem;
+  color: #3b5998;
+}
+footer .connect .twitter i {
+  font-size: 2.3rem;
+  padding: 1rem;
+  color: #1da1f2;
+}
+footer .connect .instagram i {
+  font-size: 2.3rem;
+  padding: 1rem;
+  color: #e1306c;
+}
+footer .connect .youtube i {
+  font-size: 2.3rem;
+  padding: 1rem;
+  color: #ff0000;
+}
+footer .connect a:hover {
+  filter: brightness(80%);
+}
+footer .intro {
+  display: none;
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 0.6rem;
+}
+footer .intro h1 {
+  font-size: 1.52rem;
+}
+footer .intro p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--color-light);
+}
+footer .copy {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+footer .copy span {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  .menu {
+    display: block;
+    flex-basis: auto;
+  }
+  .menu li {
+    margin-top: 0;
+    display: inline-block;
+  }
+  .menu li + li {
+    margin-left: 0.5rem;
+    margin-top: 0;
+  }
+  .menu a {
+    transition: color 180ms ease;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+  }
+  .menu a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    transition: width 200ms ease;
+    background: var(--gradient);
+  }
+  .menu a:hover {
+    color: var(--body-color);
+  }
+  .menu a:hover::after {
+    width: 100%;
+  }
+
+  .inservice h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    padding: 0.5rem;
+  }
+  .inservice h1 span {
+    border-bottom: 2px solid var(--body-color);
+  }
+  .inservice .services {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  .inservice .services .service {
+    width: 400px;
+    height: 300px;
+    color: var(--body-color);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    margin-top: 4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+  }
+  .inservice .services .service .areatext {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  .inservice .services .service .img {
+    display: flex;
+    justify-content: center;
+  }
+  .inservice .services .service .img img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .banner {
+    margin-top: 4rem;
+  }
+  .banner h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 3rem;
+    padding: 0.5rem;
+  }
+  .banner h1 span {
+    border-bottom: 2px solid var(--body-color);
+    border-radius: 510px;
+    padding: 0.5rem;
+  }
+  .banner h1 i {
+    color: var(--body-color);
+  }
+  .banner .imagebanner {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .innerfooter {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .innerfooter .connect {
+    flex-basis: 50%;
+    margin-right: 4.5rem;
+  }
+  .innerfooter .connect h1 {
+    font-size: 2rem;
+  }
+  .innerfooter .intro {
+    flex-basis: 30%;
+    display: block;
+    margin-top: 2rem;
+    border-right: 1px solid;
+    margin-right: 3rem;
+  }
+  .innerfooter .intro h1 {
+    font-size: 2rem;
+    font-family: "Dancing Script", cursive;
+  }
+
+  #location-hours {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  #location-hours #location {
+    flex-basis: 40%;
+    margin-top: 5rem;
+  }
+  #location-hours #hours {
+    flex-basis: 40%;
+  }
+  #location-hours #hours .small1 {
+    margin-top: 0;
+  }
+  #location-hours #hours .small1 p {
+    padding: 0.1rem;
+  }
+
+  .repair .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .repair .content {
+    padding-top: 4rem;
+    flex-basis: 60%;
+  }
+  .repair h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  .repair ul {
+    display: block;
+    margin-top: 1.5rem;
+  }
+  .repair li {
+    list-style: none;
+    margin-top: 0.75rem;
+    display: inline-block;
+    margin-right: 1.5rem;
+  }
+  .repair p {
+    font-size: 1.2rem;
+    margin-top: 2.5rem;
+  }
+  .repair p:first-of-type {
+    background: var(--secondary);
+    width: max-content;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    color: var(--body-background);
+  }
+  .repair h3:first-of-type {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #f1fcf1;
+    background-color: black;
+    width: max-content;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
+  .repair h3:last-of-type {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #17bf86;
+    color: #e9fcf6;
+    width: max-content;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  .repair .imagecontent {
+    margin-top: 4rem;
+    display: block;
+    flex-basis: 40%;
+    filter: brightness(110%);
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */

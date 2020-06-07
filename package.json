@@ -1,0 +1,11 @@
+{
+  "name": "mr",
+  "version": "1.0.0",
+  "description": "Mobile Repair",
+  "main": "index.js",
+  "scripts": {
+    "compile-css":"sass --watch sass/main.scss:css/main.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
